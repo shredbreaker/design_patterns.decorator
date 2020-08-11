@@ -12,14 +12,19 @@ class ExampleViewController: UIViewController {
   @IBOutlet weak var headerLabel: UILabel?
   @IBOutlet weak var bodyLabel: UILabel?
   @IBOutlet weak var linkLabel: UILabel?
+  @IBOutlet weak var priceOldLabel: UILabel?
+  @IBOutlet weak var priceNewLabel: UILabel?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    headerLabel?.style = .header
-    bodyLabel?.style = .body
+    headerLabel?.style(.header)
+    bodyLabel?.style(.body)
     linkLabel?
       .style(.hyperlink)
       .url(URL(string: "https://medium.com"))
+    
+    priceOldLabel?.style(.price(crossed: true))
+    priceNewLabel?.style(.price())
   }
 }
 

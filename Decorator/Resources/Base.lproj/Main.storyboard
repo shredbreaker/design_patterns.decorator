@@ -42,8 +42,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="355" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyU-6D-Htk">
+                                        <rect key="frame" x="0.0" y="146.5" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="199" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1I-DU-nh0">
+                                        <rect key="frame" x="0.0" y="175" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t58-Mb-4bH">
-                                        <rect key="frame" x="0.0" y="146.5" width="398" height="655.5"/>
+                                        <rect key="frame" x="0.0" y="203.5" width="398" height="598.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -62,6 +74,8 @@
                         <outlet property="bodyLabel" destination="U5O-o5-HYg" id="1Xt-c8-HWc"/>
                         <outlet property="headerLabel" destination="a3q-XJ-NGq" id="Sgt-rm-fyr"/>
                         <outlet property="linkLabel" destination="1iL-Ik-kRW" id="Hw1-tX-mSm"/>
+                        <outlet property="priceNewLabel" destination="p1I-DU-nh0" id="sXs-pw-a76"/>
+                        <outlet property="priceOldLabel" destination="qyU-6D-Htk" id="VJV-qj-Ud9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

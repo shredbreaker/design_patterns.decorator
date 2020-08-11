@@ -8,10 +8,11 @@
 import UIKit
 
 /// Deifine list of text styles
-enum TextStyle {
+enum TextStyle: Equatable {
   case header
   case body
   case hyperlink
+  case price(crossed: Bool = false)
 }
 
 extension TextStyle {
@@ -25,5 +26,6 @@ extension TextStyle {
   enum Modifiers {
     case caps
     case underline
+    case strikethrough
   }
 }

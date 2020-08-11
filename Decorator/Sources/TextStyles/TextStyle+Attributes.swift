@@ -13,6 +13,7 @@ extension TextStyle {
     case .header: return headerDescriptor
     case .body: return bodyDescriptor
     case .hyperlink: return hyperlinkDescriptor
+    case .price(let crossed): return priceDescriptor(crossed: crossed)
     }
   }
   
@@ -27,4 +28,9 @@ extension TextStyle {
   private var hyperlinkDescriptor: TextStyleDescriptor {
     TextStyleDescriptor(font: .system(size: 14, weight: .light), modifiers: [.underline], textAlignment: .right)
   }
+  private func priceDescriptor(crossed: Bool) -> TextStyleDescriptor {
+    TextStyleDescriptor(font: .system(size: 12, weight: .regular), modifiers: crossed ? [.strikethrough] : [], textAlignment: .right)
+  }
+
+  
 }
