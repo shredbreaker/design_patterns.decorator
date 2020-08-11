@@ -16,16 +16,19 @@ enum TextStyle: Equatable {
 }
 
 extension TextStyle {
-  /// Information about font, allow us to add custom font or use system one
   enum Font {
     case custom(name: String, size: CGFloat)
     case system(size: CGFloat, weight: UIFont.Weight = .regular)
   }
   
-  /// List of modifiers for text processing
   enum Modifiers {
     case caps
     case underline
     case strikethrough
+  }
+  
+  enum Paragraph: Hashable {
+    case textAlignment(_ value: NSTextAlignment)
+    case lineHeightMultiple(_ value: CGFloat)
   }
 }

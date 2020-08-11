@@ -18,19 +18,29 @@ extension TextStyle {
   }
   
   private var headerDescriptor: TextStyleDescriptor {
-    TextStyleDescriptor(font: .custom(name: "Lobster-Regular", size: 20.0), modifiers: [.caps], textAlignment: .center)
+    TextStyleDescriptor(
+      font: .custom(name: "Lobster-Regular", size: 20.0),
+      modifiers: [.caps],
+      paragraph: [.textAlignment(.center)])
   }
   
   private var bodyDescriptor: TextStyleDescriptor {
-    TextStyleDescriptor(font: .system(size: 14, weight: .thin), lineHeightMultiple: 1.13)
+    TextStyleDescriptor(
+      font: .system(size: 14, weight: .thin),
+      paragraph: [.lineHeightMultiple(1.13)])
   }
   
   private var hyperlinkDescriptor: TextStyleDescriptor {
-    TextStyleDescriptor(font: .system(size: 14, weight: .light), modifiers: [.underline], textAlignment: .right)
+    TextStyleDescriptor(
+      font: .system(size: 14, weight: .light),
+      modifiers: [.underline],
+      paragraph: [.textAlignment(.right)])
   }
-  private func priceDescriptor(crossed: Bool) -> TextStyleDescriptor {
-    TextStyleDescriptor(font: .system(size: 12, weight: .regular), modifiers: crossed ? [.strikethrough] : [], textAlignment: .right)
-  }
-
   
+  private func priceDescriptor(crossed: Bool) -> TextStyleDescriptor {
+    return TextStyleDescriptor(
+      font: .system(size: 12, weight: .regular),
+      modifiers: crossed ? [.strikethrough] : [],
+      paragraph: [.textAlignment(.right)])
+  }
 }

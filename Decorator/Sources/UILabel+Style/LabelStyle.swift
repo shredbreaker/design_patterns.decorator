@@ -10,7 +10,7 @@ import UIKit
 class LabelStyle: UIView {
   
   private weak var label: UILabel?
-  private let textObserverProperty = "text"
+  private let observedProperty = "text"
   
   var style: TextStyle = .body {
     didSet {
@@ -45,16 +45,16 @@ extension LabelStyle {
     
   private func registerTextObserver() {
     guard let label = label else { return }
-    label.addObserver(self, forKeyPath: textObserverProperty, options: .new, context: nil)
+    label.addObserver(self, forKeyPath: observedProperty, options: .new, context: nil)
   }
   
   private func removeTextObserver() {
     guard let label = label else { return }
-    label.removeObserver(self, forKeyPath: textObserverProperty, context: nil)
+    label.removeObserver(self, forKeyPath: observedProperty, context: nil)
   }
   
   override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-    guard keyPath == textObserverProperty, let object = object as? UILabel, object === label else { return }
+    guard keyPath == observedProperty, let object = object as? UILabel, object === label else { return }
     applyStyle()
   }
 }
