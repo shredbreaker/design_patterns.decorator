@@ -9,18 +9,9 @@ import UIKit
 
 extension UILabel {  
   var style: TextStyle {
-    get {
-      let labelStyle = subview(type: LabelStyle.self) ?? LabelStyle(label: self)
-      return labelStyle.style
-    }
-    set {
-      let labelStyle = subview(type: LabelStyle.self) ?? LabelStyle(label: self)
-      labelStyle.style = newValue
-    }
+    get { viewDecorator(type: LabelStyleDecorator.self).style }
+    set { viewDecorator(type: LabelStyleDecorator.self).style = newValue }
   }
   
-  @discardableResult func style(_ style: TextStyle) -> Self {
-    self.style = style
-    return self
-  }
+  @discardableResult func style(_ style: TextStyle) -> Self { self.style = style; return self }
 }

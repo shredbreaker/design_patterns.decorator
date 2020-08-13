@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F84BC06924E1C9280030CEDF /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BC06824E1C9280030CEDF /* LabelStyle.swift */; };
+		F807C67D24E58F8400DF808E /* UIView+ViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F807C67C24E58F8300DF808E /* UIView+ViewDecorator.swift */; };
+		F807C67F24E5A06000DF808E /* HyperlinkDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F807C67E24E5A06000DF808E /* HyperlinkDecorator.swift */; };
+		F807C68324E5C4CA00DF808E /* ViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F807C68224E5C4CA00DF808E /* ViewDecorator.swift */; };
+		F84BC06924E1C9280030CEDF /* LabelStyleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BC06824E1C9280030CEDF /* LabelStyleDecorator.swift */; };
 		F84BC06C24E1CBBF0030CEDF /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84BC06B24E1CBBF0030CEDF /* UIView+Subviews.swift */; };
 		F8A1F38524E1AD0D00215B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1F38424E1AD0D00215B97 /* AppDelegate.swift */; };
 		F8A1F38924E1AD0D00215B97 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1F38824E1AD0D00215B97 /* ExampleViewController.swift */; };
@@ -20,11 +23,13 @@
 		F8A1F3A724E1B4FB00215B97 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8A1F3A624E1B4FB00215B97 /* Lobster-Regular.ttf */; };
 		F8A1F3AA24E1BD2400215B97 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1F3A924E1BD2400215B97 /* UILabel+Style.swift */; };
 		F8A1F3AE24E1C4E200215B97 /* UILabel+Hyperlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1F3AD24E1C4E200215B97 /* UILabel+Hyperlink.swift */; };
-		F8A1F3B124E1C52D00215B97 /* URLContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1F3B024E1C52D00215B97 /* URLContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F84BC06824E1C9280030CEDF /* LabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
+		F807C67C24E58F8300DF808E /* UIView+ViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewDecorator.swift"; sourceTree = "<group>"; };
+		F807C67E24E5A06000DF808E /* HyperlinkDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkDecorator.swift; sourceTree = "<group>"; };
+		F807C68224E5C4CA00DF808E /* ViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDecorator.swift; sourceTree = "<group>"; };
+		F84BC06824E1C9280030CEDF /* LabelStyleDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelStyleDecorator.swift; sourceTree = "<group>"; };
 		F84BC06B24E1CBBF0030CEDF /* UIView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
 		F8A1F38124E1AD0D00215B97 /* Decorator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decorator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A1F38424E1AD0D00215B97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +44,6 @@
 		F8A1F3A624E1B4FB00215B97 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		F8A1F3A924E1BD2400215B97 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		F8A1F3AD24E1C4E200215B97 /* UILabel+Hyperlink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Hyperlink.swift"; sourceTree = "<group>"; };
-		F8A1F3B024E1C52D00215B97 /* URLContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 		F84BC06A24E1CBB40030CEDF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F807C68224E5C4CA00DF808E /* ViewDecorator.swift */,
 				F84BC06B24E1CBBF0030CEDF /* UIView+Subviews.swift */,
+				F807C67C24E58F8300DF808E /* UIView+ViewDecorator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -125,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				F8A1F3A924E1BD2400215B97 /* UILabel+Style.swift */,
-				F84BC06824E1C9280030CEDF /* LabelStyle.swift */,
+				F84BC06824E1C9280030CEDF /* LabelStyleDecorator.swift */,
 			);
 			path = "UILabel+Style";
 			sourceTree = "<group>";
@@ -134,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F8A1F3AD24E1C4E200215B97 /* UILabel+Hyperlink.swift */,
-				F8A1F3B024E1C52D00215B97 /* URLContainer.swift */,
+				F807C67E24E5A06000DF808E /* HyperlinkDecorator.swift */,
 			);
 			path = "UILabel+URL";
 			sourceTree = "<group>";
@@ -210,13 +216,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F807C67F24E5A06000DF808E /* HyperlinkDecorator.swift in Sources */,
+				F807C67D24E58F8400DF808E /* UIView+ViewDecorator.swift in Sources */,
 				F8A1F3AE24E1C4E200215B97 /* UILabel+Hyperlink.swift in Sources */,
 				F84BC06C24E1CBBF0030CEDF /* UIView+Subviews.swift in Sources */,
 				F8A1F39D24E1AEBB00215B97 /* TextStyle.swift in Sources */,
-				F84BC06924E1C9280030CEDF /* LabelStyle.swift in Sources */,
+				F84BC06924E1C9280030CEDF /* LabelStyleDecorator.swift in Sources */,
 				F8A1F3AA24E1BD2400215B97 /* UILabel+Style.swift in Sources */,
-				F8A1F3B124E1C52D00215B97 /* URLContainer.swift in Sources */,
 				F8A1F3A524E1B43D00215B97 /* TextStyle+Attributes.swift in Sources */,
+				F807C68324E5C4CA00DF808E /* ViewDecorator.swift in Sources */,
 				F8A1F39F24E1B06000215B97 /* TextStyleDescriptor.swift in Sources */,
 				F8A1F38924E1AD0D00215B97 /* ExampleViewController.swift in Sources */,
 				F8A1F38524E1AD0D00215B97 /* AppDelegate.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 class ExampleViewController: UIViewController {
 
-  @IBOutlet weak var headerLabel: UILabel?
+  @IBOutlet weak var headerLabel: UILabel!
   @IBOutlet weak var bodyLabel: UILabel?
   @IBOutlet weak var linkLabel: UILabel?
   @IBOutlet weak var priceOldLabel: UILabel?
@@ -25,6 +25,23 @@ class ExampleViewController: UIViewController {
     
     priceOldLabel?.style(.price(crossed: true))
     priceNewLabel?.style(.price())
+    
+
+    headerLabel.url = URL(string: "https://medium.com")
+//    let hyperlinkDecorator = HyperlinkDecoratorOld(label: headerLabel!)
+//    hyperlinkDecorator.url = URL(string: "https://medium.com")
+//    self.hyperlinkDecorator = hyperlinkDecorator
+    
+  }
+}
+
+
+class ViewController: UIViewController {  
+  @IBOutlet weak var hyperLabel: UILabel!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    hyperLabel.url = URL(string: "https://medium.com")
   }
 }
 
